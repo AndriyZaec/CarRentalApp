@@ -16,6 +16,9 @@
 		495C3B812360ACCB0037631C /* CarRentalAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B802360ACCB0037631C /* CarRentalAppTests.swift */; };
 		495C3B8D2360AE0A0037631C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B8C2360AE0A0037631C /* Car.swift */; };
 		495C3B8F2360C2470037631C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B8E2360C2470037631C /* Constants.swift */; };
+		495C3B972360CD4B0037631C /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B962360CD4B0037631C /* ApiController.swift */; };
+		495C3B982360CED20037631C /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B902360C92E0037631C /* ApiProvider.swift */; };
+		495C3B9E2360D9EF0037631C /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B992360D95D0037631C /* CarsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		495C3B822360ACCB0037631C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		495C3B8C2360AE0A0037631C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		495C3B8E2360C2470037631C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		495C3B902360C92E0037631C /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		495C3B962360CD4B0037631C /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
+		495C3B992360D95D0037631C /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,15 +89,16 @@
 		495C3B682360ACC90037631C /* CarRentalApp */ = {
 			isa = PBXGroup;
 			children = (
-				495C3B8B2360AD9B0037631C /* Models */,
 				495C3B692360ACC90037631C /* AppDelegate.swift */,
 				495C3B6B2360ACC90037631C /* SceneDelegate.swift */,
+				495C3B9B2360D9640037631C /* ViewModels */,
+				495C3B922360CA6B0037631C /* Infrastructure */,
+				495C3B8B2360AD9B0037631C /* Models */,
 				495C3B6D2360ACC90037631C /* ContentView.swift */,
 				495C3B6F2360ACCB0037631C /* Assets.xcassets */,
 				495C3B742360ACCB0037631C /* LaunchScreen.storyboard */,
 				495C3B772360ACCB0037631C /* Info.plist */,
 				495C3B712360ACCB0037631C /* Preview Content */,
-				495C3B8E2360C2470037631C /* Constants.swift */,
 			);
 			path = CarRentalApp;
 			sourceTree = "<group>";
@@ -119,6 +126,32 @@
 				495C3B8C2360AE0A0037631C /* Car.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		495C3B922360CA6B0037631C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				495C3B8E2360C2470037631C /* Constants.swift */,
+				495C3B932360CA820037631C /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		495C3B932360CA820037631C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				495C3B902360C92E0037631C /* ApiProvider.swift */,
+				495C3B962360CD4B0037631C /* ApiController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		495C3B9B2360D9640037631C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				495C3B992360D95D0037631C /* CarsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +257,11 @@
 			files = (
 				495C3B8F2360C2470037631C /* Constants.swift in Sources */,
 				495C3B6A2360ACC90037631C /* AppDelegate.swift in Sources */,
+				495C3B972360CD4B0037631C /* ApiController.swift in Sources */,
+				495C3B9E2360D9EF0037631C /* CarsViewModel.swift in Sources */,
 				495C3B6C2360ACC90037631C /* SceneDelegate.swift in Sources */,
 				495C3B8D2360AE0A0037631C /* Car.swift in Sources */,
+				495C3B982360CED20037631C /* ApiProvider.swift in Sources */,
 				495C3B6E2360ACC90037631C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

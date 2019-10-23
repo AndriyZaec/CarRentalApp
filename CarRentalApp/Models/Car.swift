@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Car: Codable {
+struct Car: Codable, Hashable, Identifiable {
     let id: String
     let modelIdentifier: String
     let modelName: String
@@ -39,7 +39,7 @@ enum TransmissionType: String, Codable {
 }
 
 enum Cleanliness: String, Codable {
-    case CLEAN
-    case REGULAR
-    case VERY_CLEAN
+    case clean = "CLEAN"
+    case regualr = "REGULAR"
+    case veryClean = "VERY_CLEAN"
 }
