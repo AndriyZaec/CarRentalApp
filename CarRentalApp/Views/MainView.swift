@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  MainView.swift
 //  CarRentalApp
 //
 //  Created by Andrew on 23.10.2019.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct MainView: View {
     
     @ObservedObject var viewModel = CarsViewModel()
     
@@ -23,8 +23,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainView()
     }
 }

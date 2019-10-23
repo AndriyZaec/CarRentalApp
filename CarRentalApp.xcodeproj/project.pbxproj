@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		495C3B6A2360ACC90037631C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B692360ACC90037631C /* AppDelegate.swift */; };
 		495C3B6C2360ACC90037631C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B6B2360ACC90037631C /* SceneDelegate.swift */; };
-		495C3B6E2360ACC90037631C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B6D2360ACC90037631C /* ContentView.swift */; };
+		495C3B6E2360ACC90037631C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B6D2360ACC90037631C /* MainView.swift */; };
 		495C3B702360ACCB0037631C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495C3B6F2360ACCB0037631C /* Assets.xcassets */; };
 		495C3B732360ACCB0037631C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 495C3B722360ACCB0037631C /* Preview Assets.xcassets */; };
 		495C3B762360ACCB0037631C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495C3B742360ACCB0037631C /* LaunchScreen.storyboard */; };
@@ -35,7 +35,7 @@
 		495C3B662360ACC90037631C /* CarRentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		495C3B692360ACC90037631C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		495C3B6B2360ACC90037631C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		495C3B6D2360ACC90037631C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		495C3B6D2360ACC90037631C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		495C3B6F2360ACCB0037631C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		495C3B722360ACCB0037631C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		495C3B752360ACCB0037631C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				495C3B9B2360D9640037631C /* ViewModels */,
 				495C3B922360CA6B0037631C /* Infrastructure */,
 				495C3B8B2360AD9B0037631C /* Models */,
-				495C3B6D2360ACC90037631C /* ContentView.swift */,
+				49AAC24A23610BEC008A3D63 /* Views */,
 				495C3B6F2360ACCB0037631C /* Assets.xcassets */,
 				495C3B742360ACCB0037631C /* LaunchScreen.storyboard */,
 				495C3B772360ACCB0037631C /* Info.plist */,
@@ -152,6 +152,14 @@
 				495C3B992360D95D0037631C /* CarsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		49AAC24A23610BEC008A3D63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				495C3B6D2360ACC90037631C /* MainView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +270,7 @@
 				495C3B6C2360ACC90037631C /* SceneDelegate.swift in Sources */,
 				495C3B8D2360AE0A0037631C /* Car.swift in Sources */,
 				495C3B982360CED20037631C /* ApiProvider.swift in Sources */,
-				495C3B6E2360ACC90037631C /* ContentView.swift in Sources */,
+				495C3B6E2360ACC90037631C /* MainView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
