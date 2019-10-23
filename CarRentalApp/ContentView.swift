@@ -9,8 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel = CarsViewModel()
+    
     var body: some View {
-        Text("Hello World")
+        ScrollView {
+            VStack {
+                ForEach(viewModel.cars) { car in
+                    Text(car.modelName)
+                }
+            }
+        }
     }
 }
 
