@@ -7,19 +7,21 @@
 //
 
 import SwiftUI
+import SwURL
 
 struct MainView: View {
     
     @ObservedObject var viewModel = CarsViewModel()
     
     var body: some View {
-        ScrollView {
-            VStack {
+        ScrollView(.horizontal) {
+            HStack {
                 ForEach(viewModel.cars) { car in
-                    Text(car.modelName)
+                    CarListCellView(car: car)
                 }
             }
-        }
+            }.frame(height: 190)
+            .foregroundColor(.gray)
     }
 }
 

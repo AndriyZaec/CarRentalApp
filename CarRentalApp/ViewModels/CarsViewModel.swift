@@ -19,7 +19,7 @@ final class CarsViewModel: ObservableObject {
         fetchCars()
     }
     
-    func fetchCars() {
+    private func fetchCars() {
         _ = provider.get(.cars)
             .replaceError(with: [])
             .receive(on: DispatchQueue.main)
