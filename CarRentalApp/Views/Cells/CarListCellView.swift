@@ -14,22 +14,34 @@ struct CarListCellView: View {
     var car: Car
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             RemoteImageView(
                 url: URL(string: car.carImageUrl ?? Constants.helper.imageNotFound.rawValue)!,
                 placeholderImage: Image.init("imageNotFound"),
                 transition: .custom(
                     transition: .opacity,
-                    animation: .easeOut(duration: 0.2
-                    )
+                    animation: .easeOut(duration: 0.5)
                 ),
                 imageRenderingMode: .original
-            ).scaledToFit()
+                )
+                .scaledToFit()
+                .frame(width: 300, height: 170)
+                .padding(.top, 10)
+                .cornerRadius(10)
             
-            Text(car.modelName)
-            Text(car.fuelType.rawValue)
-            Text(car.color)
+            VStack(alignment: .leading, spacing: 5) {
+                Text(car.modelName)
+                    .foregroundColor(.primary)
+                    .font(.headline)
+                
+                Text(car.make)
+                    .foregroundColor(.secondary)
+                    .font(.subheadline)
+            }.padding()
         }
+        .background(Color.gray.opacity(0.2))
+        .cornerRadius(10)
+        .shadow(radius: 10)
     }
 }
 

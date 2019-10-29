@@ -14,14 +14,17 @@ struct MainView: View {
     @ObservedObject var viewModel = CarsViewModel()
     
     var body: some View {
-        ScrollView(.horizontal) {
-            HStack {
-                ForEach(viewModel.cars) { car in
-                    CarListCellView(car: car)
+        NavigationView {
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    ForEach(viewModel.cars) { car in
+                        CarListCellView(car: car).padding()
+                    }
                 }
             }
-            }.frame(height: 190)
-            .foregroundColor(.gray)
+            .navigationBarTitle(Text("CARS"))
+            .foregroundColor(.orange)
+        }
     }
 }
 
@@ -30,3 +33,13 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
+
+/*
+ ScrollView(showsIndicators: false) {
+ VStack {
+ ForEach(viewModel.cars) { car in
+ CarListCellView(car: car).padding()
+ }
+ }
+ }
+ */
