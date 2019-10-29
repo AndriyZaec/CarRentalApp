@@ -22,6 +22,8 @@
 		499E2E8B236711D100B56238 /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = 499E2E8A236711D100B56238 /* SwURL */; };
 		49AAC24D23610CD7008A3D63 /* CarListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAC24C23610CD7008A3D63 /* CarListCellView.swift */; };
 		49DC2F20236777EA00DEEEA9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC2F1F236777EA00DEEEA9 /* MapView.swift */; };
+		49DDE2EE2368DDD100543B05 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDE2ED2368DDD100543B05 /* DetailsView.swift */; };
+		49DDE2F02368E7C300543B05 /* RemoteCircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DDE2EF2368E7C300543B05 /* RemoteCircleImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		495C3B992360D95D0037631C /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
 		49AAC24C23610CD7008A3D63 /* CarListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCellView.swift; sourceTree = "<group>"; };
 		49DC2F1F236777EA00DEEEA9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		49DDE2ED2368DDD100543B05 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		49DDE2EF2368E7C300543B05 /* RemoteCircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCircleImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,20 +164,22 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		499E2E8C23671BA400B56238 /* Partial */ = {
+		499E2E8C23671BA400B56238 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
 				49DC2F1F236777EA00DEEEA9 /* MapView.swift */,
+				49DDE2EF2368E7C300543B05 /* RemoteCircleImage.swift */,
 			);
-			path = Partial;
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		49AAC24A23610BEC008A3D63 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				499E2E8C23671BA400B56238 /* Partial */,
+				499E2E8C23671BA400B56238 /* Custom */,
 				49AAC24B23610C9B008A3D63 /* Cells */,
 				495C3B6D2360ACC90037631C /* MainView.swift */,
+				49DDE2ED2368DDD100543B05 /* DetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,7 +304,9 @@
 				495C3B6A2360ACC90037631C /* AppDelegate.swift in Sources */,
 				495C3B972360CD4B0037631C /* ApiController.swift in Sources */,
 				495C3B9E2360D9EF0037631C /* CarsViewModel.swift in Sources */,
+				49DDE2F02368E7C300543B05 /* RemoteCircleImage.swift in Sources */,
 				495C3B6C2360ACC90037631C /* SceneDelegate.swift in Sources */,
+				49DDE2EE2368DDD100543B05 /* DetailsView.swift in Sources */,
 				495C3B8D2360AE0A0037631C /* Car.swift in Sources */,
 				49DC2F20236777EA00DEEEA9 /* MapView.swift in Sources */,
 				495C3B982360CED20037631C /* ApiProvider.swift in Sources */,

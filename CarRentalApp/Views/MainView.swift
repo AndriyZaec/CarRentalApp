@@ -18,12 +18,14 @@ struct MainView: View {
             ScrollView(showsIndicators: false) {
                 VStack {
                     ForEach(viewModel.cars) { car in
-                        CarListCellView(car: car).padding()
+                        NavigationLink(destination: DetailsView(car: car)) {
+                              CarListCellView(car: car)
+                                .padding()
+                        }.buttonStyle(PlainButtonStyle())
                     }
                 }
             }
             .navigationBarTitle(Text("CARS"))
-            .foregroundColor(.orange)
         }
     }
 }
@@ -33,13 +35,3 @@ struct MainView_Previews: PreviewProvider {
         MainView()
     }
 }
-
-/*
- ScrollView(showsIndicators: false) {
- VStack {
- ForEach(viewModel.cars) { car in
- CarListCellView(car: car).padding()
- }
- }
- }
- */
