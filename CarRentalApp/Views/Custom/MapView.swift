@@ -17,7 +17,7 @@ struct MapView: UIViewRepresentable {
         let coordinate = CLLocationCoordinate2D(latitude: car.latitude,
                                                 longitude: car.longitude)
         
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
         let region = MKCoordinateRegion(center: coordinate, span: span)
         uiView.setRegion(region, animated: true)
         
@@ -42,7 +42,7 @@ struct MapView_Previews: PreviewProvider {
                      name: "Mini",
                      make: "Mini",
                      group: "Mini",
-                     color: "black",
+                     color: .absoluteBlackMetal,
                      series: "Mini",
                      fuelType: .E,
                      fuelLevel: 0.4,

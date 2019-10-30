@@ -9,7 +9,7 @@
 import SwiftUI
 import SwURL
 
-struct RemoteCircleImage: View {
+struct RemoteDecoratedImage: View {
     
     let imageUrl: String?
     
@@ -32,6 +32,6 @@ struct RemoteCircleImage: View {
 
 struct CircleImage_Preview: PreviewProvider {
     static var previews: some View {
-        RemoteCircleImage(imageUrl: nil)
+        RemoteDecoratedImage(imageUrl: nil)
     }
 }

@@ -12,72 +12,101 @@ struct DetailsView: View {
     
     let car: Car
     
+    @State private var showMap: Bool = false
+    
     var body: some View {
-        VStack {
-            MapView(car: car)
-                .edgesIgnoringSafeArea(.top)
-                .frame(height: 200)
-                .disabled(true)
-            
-            RemoteCircleImage(imageUrl: car.carImageUrl)
-                .offset(y: -80)
-                .padding(.bottom, -80)
-                .frame(width: 300)
-            
-            VStack(alignment: .center) {
-                Text(car.modelName)
-                    .font(.title)
-                    .foregroundColor(.primary)
-                Text(car.make)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-                Text(car.licensePlate)
-                    .padding([.top, .bottom], 3)
-                    .padding([.leading, .trailing], 7)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(5)
-                    .shadow(radius: 5)
-                    .padding([.top], 10)
-            }
-            
-            Divider()
-            
-            HStack {
-                VStack(alignment: .leading, spacing: 5) {
-                    HStack(spacing: 5) {
-                        Text("Fuel type: ")
-                        Image(car.fuelType.imageName)
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                        Text("(\(car.fuelType.description))")
-                        
-                        Spacer()
+        GeometryReader { metrics in
+            VStack {
+                MapView(car: self.car)
+                    .edgesIgnoringSafeArea(.top)
+                    .frame(height: metrics.size.height * 0.3 )
+                    .onTapGesture {
+                        self.showMap = true
+                    }.sheet(isPresented: self.$showMap) {
+                        DetailsMapView(car: self.car)
                     }
+                
+                RemoteDecoratedImage(imageUrl: self.car.carImageUrl)
+                    .offset(y: -70)
+                    .padding(.bottom, -70)
+                    .frame(width: metrics.size.width * 0.6)
+                
+                VStack(alignment: .center) {
+                    Text(self.car.modelName)
+                        .font(.title)
+                        .foregroundColor(.primary)
+                    Text(self.car.make)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                    Text(self.car.licensePlate)
+                        .padding([.top, .bottom], 3)
+                        .padding([.leading, .trailing], 7)
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(5)
+                        .shadow(radius: 5)
+                        .padding([.top], 10)
+                }
+                
+                Divider()
+                
+                HStack {
+                    VStack(alignment: .leading, spacing: 5) {
+                        HStack(spacing: 5) {
+                            Text("Fuel type: ")
+                            Image(self.car.fuelType.resourceName)
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                            Text("(\(self.car.fuelType.description))")
+                            
+                            Spacer()
+                        }
+                        
+                        HStack(spacing: 5) {
+                            Text("Fuel level: ")
+                            ProgressBar(value: self.car.fuelLevel)
+                                .foregroundColor(.accentColor)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack(spacing: 5) {
+                            Text("Transmission: ")
+                            Image(self.car.transmission.resourceName)
+                                .renderingMode(.template)
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                            Text("(\(self.car.transmission.description))")
+                            
+                            Spacer()
+                        }
+                        
+                        HStack(spacing: 5) {
+                            Text("Color: ")
+                            Rectangle()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(Color(self.car.color.resourceName))
+                                .cornerRadius(5)
+                                .border(Color.white, width: 2)
+                                .cornerRadius(5)
+                            
+                            Spacer()
+                        }
+                        
+                        HStack(spacing: 5) {
+                            Text("Inner cleanliness: ")
+                            Text("\(self.car.innerCleanliness.rate)")
+                            
+                            Spacer()
+                        }
+                    }.padding()
                     
-                    HStack(spacing: 5) {
-                        Text("Fuel level: ")
-                        ProgressBar(value: car.fuelLevel)
-                            .foregroundColor(.accentColor)
-                        
-                        Spacer()
-                    }
-                    
-                    HStack(spacing: 5) {
-                        Text("Transmission: ")
-                        Image(car.transmission.imageName)
-                            .resizable()
-                            .frame(width: 30, height: 30)
-                        Text("(\(car.transmission.description))")
-                        
-                        Spacer()
-                    }
-                }.padding()
+                    Spacer()
+                }
                 
                 Spacer()
             }
-            
-            Spacer()
         }
     }
 }
@@ -90,7 +119,7 @@ struct DetailsView_Previews: PreviewProvider {
                               name: "Mini",
                               make: "Mini",
                               group: "Mini",
-                              color: "black",
+                              color: .absoluteBlackMetal,
                               series: "Mini",
                               fuelType: .E,
                               fuelLevel: 0.4,

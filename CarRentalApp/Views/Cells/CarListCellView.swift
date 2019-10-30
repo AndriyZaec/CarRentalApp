@@ -53,7 +53,7 @@ struct CarListCellView_Previews: PreviewProvider {
                                  name: "Mini",
                                  make: "Mini",
                                  group: "Mini",
-                                 color: "black",
+                                 color: .absoluteBlackMetal,
                                  series: "Mini",
                                  fuelType: .E,
                                  fuelLevel: 0.4,
