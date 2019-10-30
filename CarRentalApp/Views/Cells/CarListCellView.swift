@@ -14,7 +14,7 @@ struct CarListCellView: View {
     var car: Car
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             RemoteImageView(
                 url: URL(string: car.carImageUrl ?? Constants.helper.imageNotFound.rawValue)!,
                 placeholderImage: Image.init("imageNotFound"),
@@ -53,7 +53,7 @@ struct CarListCellView_Previews: PreviewProvider {
                                  name: "Mini",
                                  make: "Mini",
                                  group: "Mini",
-                                 color: "black",
+                                 color: .absoluteBlackMetal,
                                  series: "Mini",
                                  fuelType: .E,
                                  fuelLevel: 0.4,
