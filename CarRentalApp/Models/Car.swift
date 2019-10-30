@@ -27,16 +27,61 @@ struct Car: Codable, Hashable, Identifiable {
     let carImageUrl: String?
 }
 
-enum FuelType: String, Codable {
+protocol CarRepresentable {
+    var imageName: String { get }
+    var description: String { get }
+}
+
+enum FuelType: String, Codable, CarRepresentable {
     case D // Diesel
     case E // Eco
     case P // Petrol
+    
+    var imageName: String {
+        switch self {
+        case .E:
+            return "Eco"
+        case .D, .P:
+            return "PetrolDiesel"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .E:
+            return "Eco"
+        case .P:
+            return "Petrol"
+        case .D:
+            return "Diesel"
+        }
+    }
 }
 
-enum TransmissionType: String, Codable {
+enum TransmissionType: String, Codable, CarRepresentable {
     case M // Mannual
     case A // Automat
+    
+    var imageName: String {
+        switch self {
+        case .M:
+            return "manual"
+        case .A:
+            return "automatic"
+        }
+    }
+    
+    var description: String {
+       switch self {
+        case .M:
+            return "Мanual"
+        case .A:
+            return "Automatic"
+        }
+    }
 }
+
+
 
 enum Cleanliness: String, Codable {
     case clean = "CLEAN"

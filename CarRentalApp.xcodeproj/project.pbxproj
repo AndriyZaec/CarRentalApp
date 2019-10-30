@@ -19,6 +19,7 @@
 		495C3B972360CD4B0037631C /* ApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B962360CD4B0037631C /* ApiController.swift */; };
 		495C3B982360CED20037631C /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B902360C92E0037631C /* ApiProvider.swift */; };
 		495C3B9E2360D9EF0037631C /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 495C3B992360D95D0037631C /* CarsViewModel.swift */; };
+		497F5A9B2369B9310083DB65 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497F5A9A2369B9310083DB65 /* ProgressBar.swift */; };
 		499E2E8B236711D100B56238 /* SwURL in Frameworks */ = {isa = PBXBuildFile; productRef = 499E2E8A236711D100B56238 /* SwURL */; };
 		49AAC24D23610CD7008A3D63 /* CarListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AAC24C23610CD7008A3D63 /* CarListCellView.swift */; };
 		49DC2F20236777EA00DEEEA9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DC2F1F236777EA00DEEEA9 /* MapView.swift */; };
@@ -53,6 +54,7 @@
 		495C3B902360C92E0037631C /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
 		495C3B962360CD4B0037631C /* ApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiController.swift; sourceTree = "<group>"; };
 		495C3B992360D95D0037631C /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
+		497F5A9A2369B9310083DB65 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		49AAC24C23610CD7008A3D63 /* CarListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListCellView.swift; sourceTree = "<group>"; };
 		49DC2F1F236777EA00DEEEA9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		49DDE2ED2368DDD100543B05 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				49DC2F1F236777EA00DEEEA9 /* MapView.swift */,
 				49DDE2EF2368E7C300543B05 /* RemoteCircleImage.swift */,
+				497F5A9A2369B9310083DB65 /* ProgressBar.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				49DDE2EE2368DDD100543B05 /* DetailsView.swift in Sources */,
 				495C3B8D2360AE0A0037631C /* Car.swift in Sources */,
 				49DC2F20236777EA00DEEEA9 /* MapView.swift in Sources */,
+				497F5A9B2369B9310083DB65 /* ProgressBar.swift in Sources */,
 				495C3B982360CED20037631C /* ApiProvider.swift in Sources */,
 				495C3B6E2360ACC90037631C /* MainView.swift in Sources */,
 			);

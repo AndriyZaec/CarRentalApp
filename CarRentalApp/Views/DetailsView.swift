@@ -13,22 +13,69 @@ struct DetailsView: View {
     let car: Car
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack {
             MapView(car: car)
                 .edgesIgnoringSafeArea(.top)
                 .frame(height: 200)
+                .disabled(true)
             
             RemoteCircleImage(imageUrl: car.carImageUrl)
                 .offset(y: -80)
-                .padding(.bottom, -130)
-                .frame(width: 200)
+                .padding(.bottom, -80)
+                .frame(width: 300)
             
-            VStack(alignment: .leading) {
+            VStack(alignment: .center) {
                 Text(car.modelName)
                     .font(.title)
-                
+                    .foregroundColor(.primary)
+                Text(car.make)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                Text(car.licensePlate)
+                    .padding([.top, .bottom], 3)
+                    .padding([.leading, .trailing], 7)
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(5)
+                    .shadow(radius: 5)
+                    .padding([.top], 10)
             }
-            .padding()
+            
+            Divider()
+            
+            HStack {
+                VStack(alignment: .leading, spacing: 5) {
+                    HStack(spacing: 5) {
+                        Text("Fuel type: ")
+                        Image(car.fuelType.imageName)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("(\(car.fuelType.description))")
+                        
+                        Spacer()
+                    }
+                    
+                    HStack(spacing: 5) {
+                        Text("Fuel level: ")
+                        ProgressBar(value: car.fuelLevel)
+                            .foregroundColor(.accentColor)
+                        
+                        Spacer()
+                    }
+                    
+                    HStack(spacing: 5) {
+                        Text("Transmission: ")
+                        Image(car.transmission.imageName)
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                        Text("(\(car.transmission.description))")
+                        
+                        Spacer()
+                    }
+                }.padding()
+                
+                Spacer()
+            }
             
             Spacer()
         }
